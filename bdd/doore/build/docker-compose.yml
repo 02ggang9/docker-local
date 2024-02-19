@@ -29,3 +29,9 @@ services:
       - --collation-server=utf8mb4_unicode_ci
     ports:
       - 3306:3306
+
+  redis:
+    container_name: doo-re-redis
+    image: redis:7-alpine3.17
+    ports:
+      - 6379:6379

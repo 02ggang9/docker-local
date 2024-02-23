@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+    <title>HTML 태그 교육</title>
+		<style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: navy; }
+        h2 { color: darkred; }
+        h3 { color: darkgreen; }
+        p { font-size: 16px; }
+        a { color: darkblue; text-decoration: none; }
+        img { width: 300px; }
+        table { border-collapse: collapse; }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>큰 제목: HTML 기초</h1>
+    <p>HTML은 웹 페이지를 만드는 데 사용됩니다.</p>
+    <h2>중간 크기 제목: 텍스트 포맷팅</h2>
+    <p><strong>중요한 텍스트</strong>와 <em>강조된 텍스트</em> 예제입니다.</p>
+    <h2>중간 크기 제목: 링크와 이미지</h2>
+    <p><a href="https://www.pusan.ac.kr/kor/Main.do">부산대학교 홈페이지</a></p>
+    <p><img src="image.png" alt="부산대학교 로고"></p>
+    <h3>작은 크기 제목: 리스트</h2>
+    <ul>
+        <li>순서 없는 리스트 항목 1</li>
+        <li>순서 없는 리스트 항목 2</li>
+    </ul>
+    <ol>
+        <li>순서 있는 리스트 항목 1</li>
+        <li>순서 있는 리스트 항목 2</li>
+    </ol>
+    <h2>테이블</h2>
+    <table border="1">
+        <tr>
+            <th>제목 1</th>
+            <th>제목 2</th>
+        </tr>
+        <tr>
+            <td>데이터 1</td>
+            <td>데이터 2</td>
+        </tr>
+    </table>
+
+		<!-- 숫자를 표시할 공간 -->
+		<p>숫자: <span id="number">0</span></p>
+		
+		<!-- 버튼 추가 -->
+		<button id="increase">+</button>
+		<button id="decrease">-</button>
+
+		<script>
+		    // 숫자를 표시할 요소 선택
+		    var numberElement = document.getElementById('number');
+		    var currentNumber = 0;
+		
+		    // 증가 버튼에 클릭 이벤트 리스너 추가
+		    document.getElementById('increase').addEventListener('click', function() {
+		        currentNumber += 1; // 숫자 증가
+		        numberElement.innerText = currentNumber; // 화면에 표시된 숫자 업데이트
+		    });
+		
+		    // 감소 버튼에 클릭 이벤트 리스너 추가
+		    document.getElementById('decrease').addEventListener('click', function() {
+		        currentNumber -= 1; // 숫자 감소
+		        numberElement.innerText = currentNumber; // 화면에 표시된 숫자 업데이트
+		    });
+		</script>
+</body>
+</html>
